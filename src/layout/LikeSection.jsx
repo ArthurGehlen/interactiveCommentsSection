@@ -1,6 +1,6 @@
 // Images
-import minus_icon from "srcimagesicon-minus.svg";
-import plus_icon from "srcimagesicon-plus.svg";
+import minus_icon from "../images/icon-minus.svg";
+import plus_icon from "../images/icon-plus.svg";
 
 // Utils
 import "./LikeSection.css";
