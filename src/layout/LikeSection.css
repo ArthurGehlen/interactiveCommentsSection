@@ -1,0 +1,30 @@
+.likes_section {
+    height: 100%;
+    width: 3rem;
+    margin: 0 1rem 0 0;
+    display: flex;
+    align-items: start;
+}
+
+.likes_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+    padding: .6rem;
+    background-color: hsl(223, 19%, 93%);
+    border-radius: .6rem;
+}
+
+.likes_wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.likes_wrapper span {
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+}

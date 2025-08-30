@@ -1,13 +1,16 @@
 // Components
-import "../layout/LikeSection";
+import LikeSection from "../layout/LikeSection";
+
+// Images
+import icon_reply from "../images/icon-reply.svg";
 
 // Utils
 import "./Comment.css";
 
-function Comment({ user, avatar, timestamp, likes, text }) {
+function Comment({ user, avatar, timestamp, likes, text, replies = [] }) {
   return (
     <div className="comment">
-      <LikeSection />
+      <LikeSection likes={likes} />
       <div className="user_wrapper">
         <header>
           <div className="user_info">
@@ -16,7 +19,7 @@ function Comment({ user, avatar, timestamp, likes, text }) {
             <p className="timestamp">{timestamp}</p>
           </div>
           <button>
-            <img src={reply_icon} alt="Reply" />
+            <img src={icon_reply} alt="Reply" />
             <span>Reply</span>
           </button>
         </header>

@@ -1,0 +1,58 @@
+.comment {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.4rem;
+  height: minmax(10rem, fit-content);
+  border-radius: .4rem;
+  display: flex;
+}
+
+.comment .user_wrapper {
+    width: 100%;
+}
+
+.comment .user_wrapper header {
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comment .user_wrapper header button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    border: none;
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.comment .user_wrapper header .user_info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comment .user_wrapper header .user_info img {
+    max-height: 100%;
+}
+
+.comment .user_wrapper header .user_info p {
+    font-weight: 500;
+}
+
+.comment .user_wrapper header .user_info .timestamp {
+    font-weight: 400;
+    color: hsl(211, 10%, 45%);
+}
+
+.comment .text_wrapper p {
+    color: hsl(211, 10%, 45%);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.comment:not(:first-child) {
+  margin-top: 2rem;
+}

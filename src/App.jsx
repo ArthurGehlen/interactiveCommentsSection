@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 // Components
-import Comment from "./components/Comment"
+import Comment from "./components/Comment";
 
 function App() {
   const [data, setData] = useState(null);
@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
-        if (!response.ok) throw new Error("Network response was not ok");
+        if (!response.ok) throw new Error("Response ERROR");
         return response.json();
       })
       .then((json) => setData(json))
@@ -21,7 +21,15 @@ function App() {
     <main>
       {data ? (
         data.comments.map((comment) => (
-          <p key={comment.id}>{comment.user.username}</p>
+          <Comment
+            key={comment.id}
+            user={comment.user.username}
+            avatar={comment.user.image["png"]}
+            timestamp={comment.createdAt}
+            likes={comment.score}
+            text={comment.content}
+            replies={[]}
+          />
         ))
       ) : (
         <p>Carregando...</p>
