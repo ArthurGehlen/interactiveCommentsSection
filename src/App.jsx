@@ -28,7 +28,7 @@ function App() {
             timestamp={comment.createdAt}
             likes={comment.score}
             text={comment.content}
-            replies={[]}
+            replies={comment.replies}
           />
         ))
       ) : (
