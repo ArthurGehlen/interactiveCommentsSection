@@ -7,7 +7,15 @@ import LikeSection from "./LikeSection";
 // Images
 import icon_reply from "../images/icon-reply.svg";
 
-function CommentLayout({ user, avatar, timestamp, likes = 0, text }) {
+function CommentLayout({
+  user,
+  replying_to,
+  avatar,
+  timestamp,
+  likes = 0,
+  text,
+  is_you = false
+}) {
   return (
     <div className="comment">
       <LikeSection likes={likes} />
@@ -16,6 +24,9 @@ function CommentLayout({ user, avatar, timestamp, likes = 0, text }) {
           <div className="user_info">
             <img src={avatar} alt="Avatar" />
             <p>{user}</p>
+            {user == "juliusomo" && (
+              <span className="is_you">you</span>
+            )}
             <p className="timestamp">{timestamp}</p>
           </div>
           <button>
@@ -24,7 +35,10 @@ function CommentLayout({ user, avatar, timestamp, likes = 0, text }) {
           </button>
         </header>
         <div className="text_wrapper">
-          <p>{text}</p>
+          <p>
+            {replying_to && <span className="replying_to">@{replying_to}</span>}
+            {text}
+          </p>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@
 .comment .user_wrapper header .user_info {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem;
 }
 
 .comment .user_wrapper header .user_info img {
@@ -49,6 +49,20 @@
 
 .comment .text_wrapper p {
     color: hsl(211, 10%, 45%);
-    text-align: justify;
     font-size: 1rem;
+}
+
+.comment .text_wrapper p .replying_to {
+    color: hsl(238, 40%, 52%);
+    margin-right: .2rem;
+    font-weight: 500;
+}
+
+.comment .user_wrapper header .is_you {
+    font-size: .675rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(238, 40%, 52%);
+    padding: .2rem .4rem;
+    border-radius: .1rem;
+    font-weight: 500;
 }
