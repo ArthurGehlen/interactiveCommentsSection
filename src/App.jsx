@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
+// Images
+import user_img from "../public/avatars/image-juliusomo.png";
+
 // Components
 import Comment from "./components/Comment";
 
@@ -34,6 +37,11 @@ function App() {
       ) : (
         <p>Carregando...</p>
       )}
+      <form className="add_comment_wrapper">
+        <img src={user_img} alt="User" />
+        <textarea name="add_comment" placeholder="Add a comment..."></textarea>
+        <button type="submit">SEND</button>
+      </form>
     </main>
   );
 }
